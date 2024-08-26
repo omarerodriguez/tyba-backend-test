@@ -52,7 +52,7 @@ Este proyecto es una API de gestión de usuarios y búsqueda de restaurantes uti
   
   ## Endpoints
   
-   - `POST /register`
+   - `POST /signup`
   
   Registra un nuevo usuario.
   
@@ -97,6 +97,24 @@ Response:
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
     }
 ```
+
+- POST /logout
+
+  Cierra sesion del usuario y devuelve un mensaje de exito.
+
+```json
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    }
+```
+
+Response:
+```json
+    {
+    "message": "User logged out successfully"
+    }
+```
+
   - GET /restaurants
 
   Busca restaurantes. Puedes proporcionar parámetros como city o location.
@@ -128,13 +146,12 @@ Response:
   - Registrar un usuario:
 
   ```bash
-   curl -X POST http://localhost:3001/register \
+   curl -X POST http://localhost:3001/signup \
    -H "Content-Type: application/json" \
    -d '{"username": "omar", "email": "omarmr7214@gmail.com", "password": "3002691428", "phone": "3002691428", "city": "barranquilla"}'
   ```
 
   - Buscar restaurantes:
-
 
    curl http://localhost:3001/restaurants?city=barranquilla
 
