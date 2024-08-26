@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "c6349f7f-b7b7-44ea-bfa7-829fbb9b9e2f",
+		"name": "TYPA CREDICORP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22288744"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"omar\",\r\n    \"email\":\"omarmr7214@gmail.com\",\r\n    \"password\":\"3002691428\",\r\n    \"phone\":\"3002691428\",\r\n    \"city\":\"barranquilla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"omarmr7214@gmail.com\",\r\n    \"password\":\"3002691428\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "RESTAURANTS",
+			"item": [
+				{
+					"name": "Find restaurant by city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/restaurant/by-city?city=Barranquilla&key=AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"restaurant",
+								"by-city"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Barranquilla"
+								},
+								{
+									"key": "key",
+									"value": "AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find restaurant by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/restaurant/by-id?restaurantId=ChIJhemZti0t9I4RnM0NYteYDbs&key=AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"restaurant",
+								"by-id"
+							],
+							"query": [
+								{
+									"key": "restaurantId",
+									"value": "ChIJhemZti0t9I4RnM0NYteYDbs"
+								},
+								{
+									"key": "key",
+									"value": "AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find restaurant by location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/restaurant/by-location?key=AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto&type=restaurant&location=10.96854,-74.78132",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"restaurant",
+								"by-location"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto"
+								},
+								{
+									"key": "type",
+									"value": "restaurant"
+								},
+								{
+									"key": "radius",
+									"value": "1500",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "10.96854,-74.78132"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "TRANSACCION",
+			"item": [
+				{
+					"name": "Create transactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":95000,\r\n    \"userId\":\"66cbdbd926069d45753f3193\",\r\n    \"restaurantId\":\"ChIJKevArcct9I4R_zVjZ0yfKyA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/restaurant/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"restaurant",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/restaurant/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"restaurant",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2MzYxMjEsImV4cCI6MTcyNDYzOTcyMX0.ohW-f0fgl2JJKCrOYADGV2dZEisIp8VoxTqBxe1P4yI",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
