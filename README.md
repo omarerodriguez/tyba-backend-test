@@ -122,7 +122,7 @@ Response:
     }
 ```
 
-  - GET /restaurants
+  - GET /restaurant
 
   Busca restaurantes. Puedes proporcionar parámetros como city.
 
@@ -145,7 +145,7 @@ Response:
     }
 ```
 
- - GET /restaurants/location
+ - GET /restaurant/location
    
     Busca restaurantes. Puedes proporcionar parámetros como location.
 
@@ -170,7 +170,7 @@ Response:
 ]
 ```
 
-- GET /restaurants/id
+- GET /restaurant/id
   
     Busca restaurantes. Puedes proporcionar parámetros como el id del restaurante.
 
@@ -192,7 +192,7 @@ Response:
     }
 ```
 
-- GET /restaurants/transactions
+- GET /restaurant/transactions
 
 Para consultar la lista de las transacciones realizadas.
 
@@ -221,7 +221,7 @@ Response:
 ]
 ```
 
-- POST /restaurants/transactions
+- POST /restaurant/transactions
   
   Para crear transacciones.
 
@@ -269,7 +269,7 @@ Response:
 
   - Buscar restaurantes:
 
-   curl http://localhost:3001/restaurants?city=barranquilla
+   curl http://localhost:3001/restaurant?city=barranquilla
 
    ### **NOTA**
    Estas credenciales son personales con fines para el buen desarrollo y fluidez de la prueba 
