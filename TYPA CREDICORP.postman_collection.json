@@ -63,7 +63,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"omarmr7214@gmail.com\",\r\n    \"password\":\"3002691428\"\r\n}",
+							"raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"user123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -91,7 +91,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs\"\r\n}",
+							"raw": "{\r\n  \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ3MTA0MTEsImV4cCI6MTcyNDcxNDAxMX0.ffHSIxUExYQUGue5ojbNckC4UalfYHHliskHepcQHf8\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -118,7 +118,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ3MDAyMjMsImV4cCI6MTcyNDcwMzgyM30.6lcVaSi7CtvayT7hN-A0DJU6NA1R68IEvkdafoo5-ic",
 						"type": "string"
 					}
 				]
@@ -155,24 +155,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/restaurant/by-city?city=Barranquilla&key=AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto",
+							"raw": "http://localhost:3001/restaurant?city=Barranquilla",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
-								"restaurant",
-								"by-city"
+								"restaurant"
 							],
 							"query": [
 								{
 									"key": "city",
 									"value": "Barranquilla"
-								},
-								{
-									"key": "key",
-									"value": "AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto"
 								}
 							]
 						}
@@ -185,7 +180,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/restaurant/by-id?restaurantId=ChIJhemZti0t9I4RnM0NYteYDbs&key=AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto",
+							"raw": "http://localhost:3001/restaurant/id?restaurantId=ChIJhemZti0t9I4RnM0NYteYDbs",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -193,16 +188,12 @@
 							"port": "3001",
 							"path": [
 								"restaurant",
-								"by-id"
+								"id"
 							],
 							"query": [
 								{
 									"key": "restaurantId",
 									"value": "ChIJhemZti0t9I4RnM0NYteYDbs"
-								},
-								{
-									"key": "key",
-									"value": "AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto"
 								}
 							]
 						}
@@ -215,7 +206,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/restaurant/by-location?key=AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto&type=restaurant&location=10.96854,-74.78132",
+							"raw": "http://localhost:3001/restaurant/location?type=restaurant&location=10.96854,-74.78132",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -223,13 +214,9 @@
 							"port": "3001",
 							"path": [
 								"restaurant",
-								"by-location"
+								"location"
 							],
 							"query": [
-								{
-									"key": "key",
-									"value": "AIzaSyDjKJI6349G8ZifT_-FICx3lj3IxsJGHto"
-								},
 								{
 									"key": "type",
 									"value": "restaurant"
@@ -254,7 +241,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ3MTA1MDUsImV4cCI6MTcyNDcxNDEwNX0.8gUlfl7h-P4FNd6Xw84eUSELUoHNWRaj2cbK-5jV3Qk",
 						"type": "string"
 					}
 				]
@@ -292,7 +279,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"amount\":95000,\r\n    \"userId\":\"66cbdbd926069d45753f3193\",\r\n    \"restaurantId\":\"ChIJKevArcct9I4R_zVjZ0yfKyA\"\r\n}",
+							"raw": "{\r\n    \"amount\":98000,\r\n    \"userId\":\"66cbdbd926069d45753f3193\",\r\n    \"restaurantId\":\"ChIJe61h-gkt9I4RCLElW_wMj68\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -340,7 +327,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ2OTA0MzgsImV4cCI6MTcyNDY5NDAzOH0.bgE7SULYy0ks-_JcHhAuU9x1XeYRZSc9AGfiaENHsGs",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNiZGJkOTI2MDY5ZDQ1NzUzZjMxOTMiLCJpYXQiOjE3MjQ3MTA1MDUsImV4cCI6MTcyNDcxNDEwNX0.8gUlfl7h-P4FNd6Xw84eUSELUoHNWRaj2cbK-5jV3Qk",
 						"type": "string"
 					}
 				]
