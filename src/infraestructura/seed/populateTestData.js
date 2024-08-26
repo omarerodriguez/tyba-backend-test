@@ -13,36 +13,24 @@ const run = async () => {
     const [salt, hashedPassword] = await authUseCases.generatePassword(
       'user123',
     );
-    /**Create a new user */
-    const user = new User({
-      username: 'user',
-      email: 'user@gmail.com',
-      password: hashedPassword,
-      salt: salt,
-      phone: '1234567890',
-      city: 'barranquilla',
-    });
-    await user.save();
-    console.log('User created:', user);
-
     /**Create a new transaction */
     const transactions = [
       {
         amount: 95000,
         status: 'completed',
-        userId: user._id,
+        userId: '66cbdbd926069d45753f3193',
         restaurantId: 'ChIJKevArcct9I4R_zVjZ0yfKyA',
       },
       {
         amount: 200000,
         status: 'completed',
-        userId: user._id,
+        userId: '66cbdbd926069d45753f3193',
         restaurantId: 'ChIJb-WSbwot9I4R0iQcadfSm3Y',
       },
       {
         amount: 280000,
         status: 'failed',
-        userId: user._id,
+        userId: '66cbdbd926069d45753f3193',
         restaurantId: 'ChIJX0H2pHUt9I4RCO6t_dq8PhI',
       },
     ];

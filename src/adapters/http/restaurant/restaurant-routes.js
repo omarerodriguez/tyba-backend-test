@@ -5,19 +5,19 @@ const {
 
 const routes = [
   {
-    url: '/restaurant/by-city',
+    url: '/restaurant',
     method: 'GET',
     middlewares: [tokenMiddleware.verifyUserToken],
     handler: restaurantHandler.searchRestaurantByCity,
   },
   {
-    url: '/restaurant/by-location',
+    url: '/restaurant/location',
     method: 'GET',
     middlewares: [tokenMiddleware.verifyUserToken],
     handler: restaurantHandler.searchNearbyRestaurants,
   },
   {
-    url: '/restaurant/by-id',
+    url: '/restaurant/id',
     method: 'GET',
     middlewares: [tokenMiddleware.verifyUserToken],
     handler: restaurantHandler.searchRestaurantById,
